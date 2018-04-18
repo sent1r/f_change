@@ -1,0 +1,3 @@
+class FChangeController < ApplicationController
+
+end
