@@ -1,0 +1,5 @@
+<% @menu_buttons.each do |_, button| %>
+    <div class="<%= get_btn_class(button, @menu_buttons.values) %> <%= button == @active_btn ? 'active-btn' : '' %>">
+      <span><%= button[:name] %></span>
+    </div>
+<% end %>
