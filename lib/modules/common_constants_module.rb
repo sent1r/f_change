@@ -1,4 +1,4 @@
-module CommonConstants
+module CommonConstantsModule
   MAIN_MENU_BUTTONS = {
     home: {name: 'Home'},
     change: {name: 'Change'},

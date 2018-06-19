@@ -8,8 +8,16 @@
 </head>
 <body>
   <%= render partial: '/layout_items/main_menu' %>
-  <div style="padding:15px;">
-    <%= yield %>
+  <div id="auth_message" style="padding: 5px;">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+  <div style="padding:2px;">
+    <% if devise_controller? %>
+      <%= render partial: '/layout_items/registrations_form' %>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </div>
 </body>
 </html>

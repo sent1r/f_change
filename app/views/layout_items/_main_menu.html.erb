@@ -1,3 +1,4 @@
+<div style="margin-top:5px;"></div>
 <div id="main_menu_container">
   <div class="col-md-9 menu-cell">
     <%= render partial: '/layout_items/main_menu_buttons' %>
@@ -17,9 +18,4 @@
       <%= link_to 'Sign In', new_user_session_path, class: 'auth-link' %>
     <% end %>
   </div>
-</div>
-
-<div id="auth_message" style="padding: 5px;">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 </div>

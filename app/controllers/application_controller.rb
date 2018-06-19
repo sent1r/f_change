@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :initialize_for_layout
 
-  require "#{Rails.root}/lib/modules/common_constants"
-  include CommonConstants
+  include CommonConstantsModule
 
   def initialize_for_layout
     @menu_buttons ||= get_main_menu_buttons
