@@ -22,3 +22,8 @@ doc/
 .project
 .DS_Store
 .idea
+
+Gemfile.local
+Gemfile.lock
+/config/database.yml
+/config/database.yml.*
