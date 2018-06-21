@@ -10,7 +10,7 @@ development:
 production:
   adapter: postgresql
   database: f_change_prod
-  username: deploq
+  username: deploy
   password: 1qaz2wsx
 
 test:
