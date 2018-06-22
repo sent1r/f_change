@@ -27,3 +27,4 @@ Gemfile.local
 Gemfile.lock
 /config/database.yml
 /config/database.yml.*
+database.yml
