@@ -1,29 +1,118 @@
-<h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-cell p-bottom">
+        <h2>Sign up</h2>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="form-row">
+      <div class="form-cell">
+        <%= f.label :email %>
+      </div>
+      <div class="form-cell">
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="form-row">
+      <div class="form-cell p-top">
+        <%= f.label :password %>
+        <% if @validatable %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+      </div>
+      <div class="form-cell p-top">
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-cell p-bottom">
+        <%= f.label :password_confirmation %>
+      </div>
+      <div class="form-cell p-bottom">
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="users_info_first_name">First Name</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'users_info', 'first_name' %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="users_info_middle_name">Middle Name</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'users_info', 'middle_name' %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-cell p-bottom">
+        <label for="users_info_last_name">Last Name</label>
+      </div>
+      <div class="form-cell p-bottom">
+        <%= text_field 'users_info', 'last_name' %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="users_info_index">Index</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'users_info', 'Index' %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="users_info_country">Country</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'users_info', 'country' %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="users_info_city">City</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'users_info', 'city' %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="users_info_address">Address</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'users_info', 'address' %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="users_info_phone">Phone</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'users_info', 'Phone' %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-cell"></div>
+      <div class="form-cell submit" align="center">
+        <div class="form-cell">
+          <%= render 'devise/shared/links' %>
+        </div>
+        <div class="form-cell">
+          <%= f.submit 'Sign up' %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
