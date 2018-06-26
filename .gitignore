@@ -26,6 +26,7 @@ doc/
 Gemfile.local
 Gemfile.lock
 /config/database.yml
+/config/secrets.yml
 
-/assets
-/assets/*
+/public/assets
+/public/assets/*
