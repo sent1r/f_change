@@ -11,6 +11,7 @@ set :rails_env, :production
 set :stage, :production
 set :branch, ENV.fetch('REVISION', 'master')
 set :keep_releases, 5
+set :remove_failed_release, true
 
 server '192.168.1.150', user: 'deploy', roled: %w{app db web}
 
