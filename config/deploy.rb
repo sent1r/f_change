@@ -5,6 +5,8 @@ set :application, 'f_change'
 set :repo_url, 'git@github.com:sent1r/f_change.git'
 
 set :deploy_to, '/home/deploy/www/public/f_change'
+set :gemfile_replace , true
+set :passenger_restart_with_touch, true
 
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
