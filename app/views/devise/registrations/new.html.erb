@@ -3,13 +3,13 @@
 
   <div class="form-container">
     <div class="form-row">
-      <div class="form-cell p-bottom">
+      <div class="form-cell form-header p-bottom">
         <h2>Sign up</h2>
       </div>
     </div>
 
     <div class="form-row">
-      <div class="form-cell">
+      <div class="form-cell p-top">
         <%= f.label :email %>
       </div>
       <div class="form-cell">
@@ -28,6 +28,7 @@
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-cell p-bottom">
         <%= f.label :password_confirmation %>
@@ -45,6 +46,7 @@
         <%= text_field 'users_info', 'first_name' %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-cell">
         <label for="users_info_middle_name">Middle Name</label>
@@ -53,6 +55,7 @@
         <%= text_field 'users_info', 'middle_name' %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-cell p-bottom">
         <label for="users_info_last_name">Last Name</label>
@@ -70,6 +73,7 @@
         <%= text_field 'users_info', 'Index' %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-cell">
         <label for="users_info_country">Country</label>
@@ -78,6 +82,7 @@
         <%= text_field 'users_info', 'country' %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-cell">
         <label for="users_info_city">City</label>
@@ -86,6 +91,7 @@
         <%= text_field 'users_info', 'city' %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-cell">
         <label for="users_info_address">Address</label>
@@ -94,25 +100,24 @@
         <%= text_field 'users_info', 'address' %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-cell">
         <label for="users_info_phone">Phone</label>
       </div>
-      <div class="form-cell">
+      <div class="form-cell p-bottom">
         <%= text_field 'users_info', 'Phone' %>
       </div>
     </div>
+  </div>
 
-    <div class="form-row">
-      <div class="form-cell"></div>
-      <div class="form-cell submit" align="center">
-        <div class="form-cell">
-          <%= render 'devise/shared/links' %>
-        </div>
-        <div class="form-cell">
-          <%= f.submit 'Sign up' %>
-        </div>
-      </div>
+  <div class="form-submit">
+    <div class="p-top"></div>
+    <div class="submit-cell p-top">
+      <%= render 'devise/shared/links' %>
+    </div>
+    <div class="submit-cell">
+      <%= f.submit 'Sign up', class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>

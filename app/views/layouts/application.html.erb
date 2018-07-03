@@ -7,12 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render partial: '/layout_items/main_menu' %>
-  <div id="auth_message" style="padding: 5px;">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <div id="main-menu-container">
+    <%= render partial: '/layout_items/main_menu' %>
   </div>
-  <div style="padding:2px;">
+  <div id="auth_message" style="display: flex; padding: 5px;">
+    <% if notice.present? %><p class="notice"><%= notice %></p><% end %>
+    <% if alert.present? %><p class="alert"><%= alert %></p><% end %>
+  </div>
+  <div>
     <% if devise_controller? %>
       <%= render partial: '/layout_items/registrations_form' %>
     <% else %>

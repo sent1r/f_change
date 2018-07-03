@@ -1,21 +1,19 @@
 <div style="margin-top:5px;"></div>
-<div id="main-menu-container">
-  <div class="col-md-9 menu-cell">
-    <%= render partial: '/layout_items/main_menu_buttons' %>
-  </div>
-  <div class="col-md-2 auth-cell-1">
-    <% if current_user.present? %>
-        <span><%= current_user.email %></span>
-    <% else %>
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'auth-link' %>
-    <% end %>
-  </div>
-  <div class="col-md-1 auth-cell-2">
-    <% if current_user.present? %>
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %><br>
-      <%= link_to 'Account Settings', '#' %>
-    <% else %>
-      <%= link_to 'Sign In', new_user_session_path, class: 'auth-link' %>
-    <% end %>
-  </div>
+<div class="col-md-8 menu-cell">
+  <%= render partial: '/layout_items/main_menu_buttons' %>
+</div>
+<div class="col-md-2 auth-cell">
+  <% if current_user.present? %>
+      <%= link_to current_user.email, '#' %>
+  <% else %>
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'auth-link' %>
+  <% end %>
+</div>
+
+<div class="col-md-2 auth-cell-last">
+  <% if current_user.present? %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %><br>
+  <% else %>
+    <%= link_to 'Sign In', new_user_session_path, class: 'auth-link' %>
+  <% end %>
 </div>

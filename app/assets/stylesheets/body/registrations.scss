@@ -1,0 +1,46 @@
+@import 'variables';
+
+.sign-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: row wrap;
+  background: $background-main;
+  width:100%;
+
+  .form-center {
+    background: $active-area;
+
+    .form-row {
+      display: table-row;
+
+      .form-cell {
+        display: table-cell;
+        padding-left: $p_10;
+        padding-right: $p_10;
+      }
+    }
+
+    .form-submit {
+      width: 100%;
+      text-align: center;
+
+      .submit-cell {
+        display: inline-block;
+        padding: $p_10;
+      }
+    }
+  }
+
+  .p-top {
+    padding-top: $p_10;
+  }
+
+  .p-bottom {
+    padding-bottom: $p_10;
+  }
+
+  .form-row {
+    text-align: left;
+  }
+}

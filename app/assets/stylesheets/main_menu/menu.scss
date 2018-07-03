@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 #main-menu-container {
   width: 100%;
@@ -9,25 +9,26 @@
     color: $active-color;
   }
 
-  .auth-cell-1, .auth-cell-2, .menu-cell {
+  .auth-cell, .auth-cell-last, .menu-cell {
     padding-left: 20px;
     padding-right: 20px;
     background: #00083f;
-    height: $menu-height;;
+    height: $menu-height;
+    white-space: nowrap;
   }
 
-  .auth-cell-1 {
+  .auth-cell {
     justify-content: flex-end;
   }
 
-  .auth-cell-2 {
-    flex-direction: column;
+  .auth-cell-last {
+    flex-direction: row;
     justify-content: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
 
-  .auth-cell-1, .auth-cell-2 {
+  .auth-cell, .auth-cell-last {
     display: flex;
     align-items: center;
   }
@@ -65,8 +66,14 @@
   }
 
   @media all and (max-width: 992px) {
-    .auth-cell-1 {
-      justify-content: flex-start;
+    .auth-cell, .auth-cell-last {
+      flex-direction: row;
+      justify-content: center;
+      height: 40px;
+    }
+
+    .auth-cell {
+      padding-top: 5px;
     }
 
     .menu-cell {
