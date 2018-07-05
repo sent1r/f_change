@@ -25,7 +25,7 @@
         <% end %>
       </div>
       <div class="form-cell p-top">
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, autocomplete: 'off' %>
       </div>
     </div>
 
@@ -34,79 +34,79 @@
         <%= f.label :password_confirmation %>
       </div>
       <div class="form-cell p-bottom">
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        <%= f.password_field :password_confirmation, autocomplete: 'off' %>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-cell">
-        <label for="users_info_first_name">First Name</label>
+        <label for="user_first_name">First Name</label>
       </div>
       <div class="form-cell">
-        <%= text_field 'users_info', 'first_name' %>
+        <%= text_field 'user', 'first_name' %>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-cell">
-        <label for="users_info_middle_name">Middle Name</label>
+        <label for="user_middle_name">Middle Name</label>
       </div>
       <div class="form-cell">
-        <%= text_field 'users_info', 'middle_name' %>
+        <%= text_field 'user', 'middle_name' %>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-cell p-bottom">
-        <label for="users_info_last_name">Last Name</label>
+        <label for="user_last_name">Last Name</label>
       </div>
       <div class="form-cell p-bottom">
-        <%= text_field 'users_info', 'last_name' %>
+        <%= text_field 'user', 'last_name' %>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-cell">
-        <label for="users_info_index">Index</label>
+        <label for="user_index">Index</label>
       </div>
       <div class="form-cell">
-        <%= text_field 'users_info', 'Index' %>
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-cell">
-        <label for="users_info_country">Country</label>
-      </div>
-      <div class="form-cell">
-        <%= text_field 'users_info', 'country' %>
+        <%= text_field 'user', 'index' %>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-cell">
-        <label for="users_info_city">City</label>
+        <label for="user_country">Country</label>
       </div>
       <div class="form-cell">
-        <%= text_field 'users_info', 'city' %>
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-cell">
-        <label for="users_info_address">Address</label>
-      </div>
-      <div class="form-cell">
-        <%= text_field 'users_info', 'address' %>
+        <%= text_field 'user', 'country' %>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-cell">
-        <label for="users_info_phone">Phone</label>
+        <label for="user_city">City</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'user', 'city' %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="user_address">Address</label>
+      </div>
+      <div class="form-cell">
+        <%= text_field 'user', 'address' %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-cell">
+        <label for="user_phone">Phone</label>
       </div>
       <div class="form-cell p-bottom">
-        <%= text_field 'users_info', 'Phone' %>
+        <%= text_field 'user', 'phone' %>
       </div>
     </div>
   </div>
